@@ -20,15 +20,15 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]  absolute"
         >
           <Image
-            src="/assets/photo.png"
+            src="/assets/middleone.png"
             priority
             quality={100}
             fill
             alt=""
-            className="object-contain"
+            className="object-contain rounded-full pb-[5px]"
           />
         </motion.div>
 
@@ -43,7 +43,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00ff99"
+            stroke="#ffaa00"
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -57,6 +57,7 @@ const Photo = () => {
               repeat: Infinity,
               repeatType: "reverse",
             }}
+            className="text-accent"
           />
         </motion.svg>
       </motion.div>

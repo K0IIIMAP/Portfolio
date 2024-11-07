@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
@@ -15,31 +8,28 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "I'm highly adaptable to varying project timelines, able to adjust to both short-term and long-term demands. I describe myself as someone who embraces hard work, is responsible, and is committed to continuous self-improvement. I'm always looking for ways to grow and enhance my skills to bring value to each project I take on.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Luke Coleman",
+      fieldValue: "Kirill Amirov",
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+40) 321 654 678",
+      fieldValue: "(+380) 96 536 0759",
     },
     {
       fieldName: "Experience",
-      fieldValue: "12+ Years",
+      fieldValue: "2+ years",
     },
-    {
-      fieldName: "Skype",
-      fieldValue: "luke.01",
-    },
+
     {
       fieldName: "Nationality",
-      fieldValue: "American",
+      fieldValue: "Ukrainian",
     },
     {
       fieldName: "Email",
-      fieldValue: "luke.01@gmail.com",
+      fieldValue: "amirov45128@gmail.com",
     },
     {
       fieldName: "Freelance",
@@ -47,7 +37,7 @@ const about = {
     },
     {
       fieldName: "Languages",
-      fieldValue: "English, Spanish",
+      fieldValue: "English, Russian, Ukrainian",
     },
   ],
 };
@@ -57,37 +47,28 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Here you can see a summary of my 2+ years of experience, highlighting the skills and expertise I’ve developed along the way. ",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
+      company: "Next.Js developer",
+      position: "Upwork Freelancer",
+      duration: "2024 - xxxx",
+    },
+
+    {
+      company: "Кабанчик.ua",
+      position: "Freelancer in Ukraine",
+      duration: "2023 - 2024",
     },
     {
-      company: "Web Design Studio",
-      position: "Front-End Developer Intern",
-      duration: "Summer 2021",
+      company: "Working on personal full-stack projects",
+      position: "Next.js Developer",
+      duration: "2022 - 2023",
     },
     {
-      company: "E-commerce Startup",
-      position: "Freelance Web Developer",
-      duration: "2020 - 2021",
-    },
-    {
-      company: "Tech Academy",
-      position: "Teaching Assistant",
-      duration: "2019 - 2020",
-    },
-    {
-      company: "Digital Agency",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
-    },
-    {
-      company: "Software Development Firm",
-      position: "Junior Developer",
-      duration: "2017 - 2018",
+      company: "Working on personal web projects",
+      position: "Learning cutting edge technologies",
+      duration: "2021 - 2022",
     },
   ],
 };
@@ -97,37 +78,39 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Here you can see a summary of my journey, highlighting the knowledge and skills I’ve gained through my education.",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
+      institution:
+        "Cutting edge knowledge of best practices in web development",
+      degree: "JS Mastery Next JS course",
+      duration: "2023 - 2024",
     },
     {
-      institution: "Codecademy",
-      degree: "Front-end Track",
-      duration: "2022",
+      institution: "Gained very strong knowledge of trend technologies",
+      degree: "ByteGrad React Next Js course ",
+      duration: "2022 - 2023",
     },
     {
-      institution: "Online Course",
-      degree: "Programming Course",
+      institution: "KNU Ukraine",
+      degree: "Computer engineering degree",
+      duration: "2022-xxxx",
+    },
+
+    {
+      institution: "Gained strong knowledge of HTML,CSS,SCSS,JS ",
+      degree: "ByteGrad by Wesley JS course",
+      duration: "2021-2022",
+    },
+    {
+      institution: "Completed the basics of JS course",
+      degree: "Bogdan Stashcuk JS course",
+      duration: "2021 - 2021",
+    },
+    {
+      institution: "Self-teaching basics of web development(HTML,CSS)",
+      degree: "YouTube",
       duration: "2020 - 2021",
-    },
-    {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019",
-    },
-    {
-      institution: "Design School",
-      degree: "Diploma in Graphic Design",
-      duration: "2016 - 2018",
-    },
-    {
-      institution: "Community College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2014 - 2016",
     },
   ],
 };
@@ -136,7 +119,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "I am always learning new technologies and keeping up with the latest trends. Here are some of the technologies I have worked with recently",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -162,10 +145,7 @@ const skills = {
       icon: <SiTailwindcss />,
       name: "tailwind.css",
     },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
+
     {
       icon: <FaFigma />,
       name: "figma",
@@ -222,7 +202,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -254,7 +234,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -315,15 +295,17 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[800px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
                         key={index}
-                        className="flex items-center justify-center xl:justify-start gap-4"
+                        className="flex items-center justify-center xl:justify-start gap-4 w-400px]"
                       >
                         <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="text-xl sm:whitespace-nowrap">
+                          {item.fieldValue}
+                        </span>
                       </li>
                     );
                   })}

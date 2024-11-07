@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight } from "react-icons/bs";
 
 import {
   Tooltip,
@@ -22,36 +22,35 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Amirov's Production",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+      "Amirov's production - my most recent project. It is an e-commerce website with my custom clothing. Showcasing an ability to work with cutting edge technologies and design.Each component is 100% responsive. Implemented with Next Auth and Stripe payments (cart,orders and so on). ",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind" },
+      { name: "Sanity" },
+      { name: "Stripe" },
+      { name: "Figma" },
+      { name: "Node" },
+    ],
+    image: "/assets/work/thumb2.png",
+    live: "https://amirov-s-production.vercel.app/",
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "Space Typo",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
-  },
-  {
-    num: "03",
-    category: "frontend",
-    title: "project 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate magnam modi.",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: "",
+      "Space-typo. My first-ever Next.js App. It is a typing application with an intricate functionalities, challenges and modes. No one is taking that as a first project, but i always relish a challenge. Includes cutting edge Next.js features (persisting data and progress) and Next Auth.",
+    stack: [
+      { name: "Next.JS" },
+      { name: "Tailwind" },
+      { name: "Next Auth" },
+      { name: "TypeScript" },
+    ],
+    image: "/assets/work/thumb1.png",
+    live: "https://space-typo-final.vercel.app/",
   },
 ];
 
@@ -84,12 +83,12 @@ const Work = () => {
               </div>
               {/* project category */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
+                {project.category}
               </h2>
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
@@ -117,19 +116,6 @@ const Work = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                {/* github project button */}
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
               </div>
             </div>
           </div>
@@ -145,13 +131,16 @@ const Work = () => {
                   <SwiperSlide key={index} className="w-full">
                     <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                       {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                      <Link href={project.live}>
+                        <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>{" "}
+                      </Link>
+
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
                           fill
-                          className="object-cover"
+                          className="object-cover cursor-pointer"
                           alt=""
                         />
                       </div>
